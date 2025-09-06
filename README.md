@@ -56,3 +56,35 @@ A simple **Number Guessing Game** written in C where the computer randomly choos
 4. The game ends when the number is guessed correctly or attempts are finished.
 
 ---
+
+📄 README.md
+# 💰 Python Expense Tracker
+
+This is my **first ever  project** 🎉  
+This is my **first ever Python project** 🎉  
+A simple **command-line expense tracker** where you can:
+- Add expenses 💵
+- List all expenses 📋
+- View total expenses ➕
+- Filter expenses by category 🔍
+- Exit the program ❌
+
+---
+
+## 📂 Project Structure
+
+
+python-expense-tracker/
+│── expense_tracker.py # Main program
+│── README.md # Project documentation
+│── .gitignore # Ignore unnecessary files
+
+
+---
+
+## 🚀 How to Run
+
+1. **Clone the repository**
+```bash
+git clone https://github.com/<your-username>/python-expense-tracker.git
+cd python-expense-tracker
