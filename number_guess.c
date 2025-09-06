@@ -4,17 +4,17 @@
 int main()
 {
 	int num_to_guess,user_guess,attempts=0;
-	int max_attempts=50;
+	int max_attempts=10;
 	
 	srand(time(0));
 	
-	num_to_guess = (rand() % 1000) + 1;
+	num_to_guess = (rand() % 100) + 1;
 	
 	printf("Welcome to the Number Guessing Game!\n");
 	
 	while(1)
 	{
-		printf("enter your guess(1-1000): ");
+		printf("enter your guess(1-100): ");
 		scanf("%d",&user_guess);
 		attempts++;
 		
@@ -42,3 +42,4 @@ int main()
 
     return 0;
 }
+
