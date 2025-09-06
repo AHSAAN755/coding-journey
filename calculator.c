@@ -26,7 +26,7 @@ int main()
             break;
             
         case '%':
-            printf("%.2lf %% %.2lf = %.2lf",(int)n1, (int)n2, (int)n1%(int)n2);
+            printf("%d %% %d = %d",(int)n1, (int)n2, (int)n1%(int)n2);
             break;
             
         default:
@@ -36,3 +36,4 @@ int main()
 	
 	return 0;
 }
+
