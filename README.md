@@ -30,3 +30,29 @@ switch-case → Control flow in C
 Typecasting → (int)n1 % (int)n2 for modulo operation
 
 Error handling for invalid input
+
+# 🎯 Number Guessing Game in C
+
+A simple **Number Guessing Game** written in C where the computer randomly chooses a number between 1 and 100, and the player has to guess it within limited attempts.
+
+---
+
+## 📌 Features
+- Random number generation using `rand()` seeded with current time.
+- Player gets **10 attempts** to guess the number.
+- Hints provided:
+  - **Too high** if the guess is larger than the number.
+  - **Too low** if the guess is smaller than the number.
+- Game ends when:
+  - The player guesses correctly 🎉
+  - OR runs out of attempts 😢
+
+---
+
+## 🖥️ How It Works
+1. The program picks a **random number between 1 and 100**.
+2. The user enters guesses one by one.
+3. The game gives feedback after every guess.
+4. The game ends when the number is guessed correctly or attempts are finished.
+
+---
