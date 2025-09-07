@@ -69,3 +69,46 @@ A simple **command-line expense tracker** where you can:
 - Filter expenses by category 🔍
 - Exit the program ❌
 
+---
+ # 🎲 Dice Rolling Game (C)
+
+A fun and simple **command-line dice rolling game** written in **C**.  
+Every time you roll, you get a random number between **1 and 6**.  
+You can keep rolling until you decide to stop.  
+
+---
+
+## 🚀 Features
+- Generates a random dice roll (1–6) 🎲  
+- Lets you roll again with **Y/y**  
+- Option to quit with **N/n**  
+- Beginner-friendly project for learning **loops, randomness, and user input**  
+
+---
+
+## 🖥️ How to Run
+
+
+(On Windows use dice_game.exe)
+
+📝 Example Gameplay
+scss
+Copy code
+Welcome to the dice rolling Game!
+you rolled 4
+roll again(y/n): y
+you rolled 2
+roll again(y/n): y
+you rolled 6
+roll again(y/n): n
+Thanks for playing
+
+## 📖 Concepts Covered
+rand() and srand(time(0)) → random number generation
+
+do { ... } while() loop → repeat until user quits
+
+scanf(" %c", &choice) → handle user input
+
+Basic control flow and loops in C
+
