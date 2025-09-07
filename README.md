@@ -131,5 +131,12 @@ Perfect beginner project to practice **loops, random numbers, and user input han
 
 ---
 
-## 📂 Project Structure
+## 📖 Concepts Covered
+rand() and srand(time(0)) → random number generation
 
+do { ... } while() loop → repeat until user quits
+
+scanf(" %c", &choice) → handle user input
+
+Basic control flow and loops in C
+---
