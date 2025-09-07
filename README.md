@@ -111,4 +111,25 @@ do { ... } while() loop → repeat until user quits
 scanf(" %c", &choice) → handle user input
 
 Basic control flow and loops in C
+---
+
+# 🎲 Dice Rolling Game in C (advanced model)
+
+**this is the second version of the dice rolling game eliminating y/n choice with a easier enter button**
+
+A simple **command-line dice rolling game** written in C.  
+Press **ENTER** to roll the dice, or type any other key and press ENTER to quit.  
+Perfect beginner project to practice **loops, random numbers, and user input handling** in C.
+
+---
+
+## 🚀 Features
+- Roll a 6-sided dice 🎲
+- Infinite rolls until you quit
+- Random outcomes on every roll
+- Simple and interactive terminal-based gameplay
+
+---
+
+## 📂 Project Structure
 
