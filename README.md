@@ -140,3 +140,32 @@ scanf(" %c", &choice) → handle user input
 
 Basic control flow and loops in C
 ---
+# 🔠 Guess the Letter Game (C)
+
+A simple **command-line guessing game** written in **C**.  
+The computer randomly picks a letter between **A and Z**, and you have to guess it within a limited number of attempts.
+
+---
+
+## 🚀 Features
+- Randomly selects a letter (A–Z) 🎯  
+- User-friendly hints:  
+  - `"Too high!"` → Your guess is later in the alphabet  
+  - `"Too low!"` → Your guess is earlier in the alphabet  
+- Maximum **8 attempts** to guess correctly  
+- Case-insensitive input (e.g., `a` or `A` works the same)  
+- Beginner-friendly project for practicing **loops, conditionals, random numbers, and character handling**  
+
+---
+📖 Concepts Covered
+
+rand() and srand(time(0)) → Random letter generation
+
+toupper() from <ctype.h> → Case-insensitive comparison
+
+do { ... } while() loop → Multiple attempts until limit
+
+Input handling with scanf()
+
+Conditional logic (if, else if, else)
+---
