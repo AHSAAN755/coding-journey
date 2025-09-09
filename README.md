@@ -111,6 +111,7 @@ do { ... } while() loop → repeat until user quits
 scanf(" %c", &choice) → handle user input
 
 Basic control flow and loops in C
+
 ---
 
 # 🎲 Dice Rolling Game in C (advanced model)
@@ -168,4 +169,5 @@ do { ... } while() loop → Multiple attempts until limit
 Input handling with scanf()
 
 Conditional logic (if, else if, else)
+
 ---
