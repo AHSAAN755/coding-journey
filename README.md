@@ -139,6 +139,7 @@ do { ... } while() loop → repeat until user quits
 scanf(" %c", &choice) → handle user input
 
 Basic control flow and loops in C
+
 ---
 # 🔠 Guess the Letter Game (C)
 
