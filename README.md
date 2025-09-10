@@ -57,7 +57,6 @@ A simple **Number Guessing Game** written in C where the computer randomly choos
 
 ---
 
-📄 README.md
 # 💰 Python Expense Tracker
 
 This is my **first ever  project** 🎉  
