@@ -158,7 +158,7 @@ The computer randomly picks a letter between **A and Z**, and you have to guess 
 - Beginner-friendly project for practicing **loops, conditionals, random numbers, and character handling**  
 
 ---
-📖 Concepts Covered
+##📖 Concepts Covered
 
 rand() and srand(time(0)) → Random letter generation
 
