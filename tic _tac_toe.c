@@ -75,12 +75,12 @@ int main()
 	{
 		printf("player %c enter row and column(1,2,3): \n",currentplayer);
 		scanf("%d %d", &row, &col);
-
+		
 		// convert 1–3 to 0–2
         row--; 
-        col--;
-
-		// check if move is vlaid
+        col--;    
+        
+  		// check if move is vlaid
 		if(row >= 0 && row < 3 && col >= 0 && col < 3 && board[row][col] == ' ')
 		{
 		board[row][col] = currentplayer;
@@ -99,6 +99,7 @@ int main()
 		}
 	}
 	
+	//display winner
 	if (winner != ' ')
 		{
 		printf("player %c wins \n",winner);
@@ -110,9 +111,3 @@ int main()
 	
 	return 0;
 }
-
-
-
-
-
-
