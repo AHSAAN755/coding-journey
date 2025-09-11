@@ -16,6 +16,7 @@ void printboard()
 {
 	//print the blank board
 	printf("\n");
+	printf("\n   0   1   2\n"); // column numbers
 	for(int i = 0; i < 3; i++)
 	{
 		printf("%c | %c | %c \n",board[i][0], board[i][1], board[i][2]);
@@ -105,5 +106,6 @@ int main()
 	
 	return 0;
 }
+
 
 
