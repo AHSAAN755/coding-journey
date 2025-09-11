@@ -19,7 +19,7 @@ void printboard()
 	printf("\n   1   2   3\n"); // column numbers
 	for(int i = 0; i < 3; i++)
 	{
-		printf("%d %c | %c | %c \n",i,board[i][0], board[i][1], board[i][2]);
+		printf("%d %c | %c | %c \n",i+1,board[i][0], board[i][1], board[i][2]);
 		 if(i<2)
 		printf("--|---|--\n");
 	}
@@ -73,7 +73,7 @@ int main()
 	
 	while(winner == ' ' && !isboardfull())
 	{
-		printf("player %c enter row and column(0,1,2): \n",currentplayer);
+		printf("player %c enter row and column(1,2,3): \n",currentplayer);
 		scanf("%d %d", &row, &col);
 
 		// convert 1–3 to 0–2
@@ -110,6 +110,7 @@ int main()
 	
 	return 0;
 }
+
 
 
 
