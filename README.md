@@ -171,3 +171,31 @@ Input handling with scanf()
 Conditional logic (if, else if, else)
 
 ---
+# ❌⭕ Tic Tac Toe in C
+
+A simple **Tic Tac Toe game** written in **C** for two players.  
+Players take turns entering their moves until one wins or the game ends in a draw.
+
+---
+
+## 🚀 Features
+- Two-player mode (`X` vs `O`)  
+- Displays the game board after every move  
+- Detects winners across **rows, columns, and diagonals**  
+- Declares a **draw** if the board is full  
+- Input validation (prevents overwriting cells)  
+
+---
+## 📖 Concepts Covered
+
+2D arrays (board[3][3]) to store the game board
+
+Functions for board initialization, printing, and winner checking
+
+Loops to keep the game running until a result
+
+Conditionals for move validation and winner detection
+
+Ternary operator to switch between players
+
+---
