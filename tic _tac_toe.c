@@ -52,7 +52,7 @@ int isboardfull()
 	{
 		for(int j = 0; j < 3; j++)
 		{
-		if(board[i][j] == ' ');
+		if(board[i][j] == ' ')
 		return 0;// is not full
 		}
 	}
@@ -105,4 +105,5 @@ int main()
 	
 	return 0;
 }
+
 
