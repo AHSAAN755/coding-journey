@@ -16,10 +16,10 @@ void printboard()
 {
 	//print the blank board
 	printf("\n");
-	printf("\n   0   1   2\n"); // column numbers
+	printf("\n   1   2   3\n"); // column numbers
 	for(int i = 0; i < 3; i++)
 	{
-		printf("%c | %c | %c \n",board[i][0], board[i][1], board[i][2]);
+		printf("%d %c | %c | %c \n",i,board[i][0], board[i][1], board[i][2]);
 		 if(i<2)
 		printf("--|---|--\n");
 	}
@@ -75,7 +75,11 @@ int main()
 	{
 		printf("player %c enter row and column(0,1,2): \n",currentplayer);
 		scanf("%d %d", &row, &col);
-		
+
+		// convert 1–3 to 0–2
+        row--; 
+        col--;
+
 		// check if move is vlaid
 		if(row >= 0 && row < 3 && col >= 0 && col < 3 && board[row][col] == ' ')
 		{
@@ -106,6 +110,7 @@ int main()
 	
 	return 0;
 }
+
 
 
 
