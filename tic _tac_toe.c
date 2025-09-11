@@ -21,7 +21,7 @@ void printboard()
 	{
 		printf("%d %c | %c | %c \n",i+1,board[i][0], board[i][1], board[i][2]);
 		 if(i<2)
-		printf("--|---|--\n");
+		printf(" ---|---|---\n");
 	}
 	printf("\n");
 }
@@ -110,6 +110,7 @@ int main()
 	
 	return 0;
 }
+
 
 
 
