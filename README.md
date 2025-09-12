@@ -199,3 +199,57 @@ Conditionals for move validation and winner detection
 Ternary operator to switch between players
 
 ---
+
+# 🧠 Memory Game in C
+
+A simple console-based memory game written in C language.
+The player must remember a sequence of random numbers and re-enter them correctly to progress through levels.
+The game continues until the player makes a mistake or successfully completes all levels.
+
+---
+
+## 📌 Features
+
+Random sequence generation using rand().
+
+Increasing difficulty with each level.
+
+User-friendly prompts to enter the sequence.
+
+Game over message with the correct sequence shown.
+
+Cross-platform support for clearing the screen (cls for Windows, clear for Linux/macOS).
+
+Maximum of 20 levels.
+
+---
+
+## 📂 Code Overview
+
+Sequence generation: Generates random digits (0–9) using rand().
+
+Display sequence: Shows the current level’s sequence for the user to memorize.
+
+User input: Prompts the user to re-enter the sequence.
+
+Validation: Compares input with the generated sequence.
+
+Progression: Moves to the next level if correct, otherwise ends the game.
+
+---
+
+## 📖 Learning Concepts
+
+This project demonstrates:
+
+Loops (for, while)
+
+Arrays
+
+Random number generation (rand())
+
+Conditional logic (if-else)
+
+Functions from <stdio.h>, <stdlib.h>, and <time.h>
+
+---
