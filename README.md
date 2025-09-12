@@ -13,7 +13,7 @@ It supports the following operations:
 
 This project is a great starting point for beginners learning **C programming**, **switch statements**, and **basic arithmetic operators**.
 
-⚠️ Error Handling
+## ⚠️ Error Handling
 
 Division by Zero → Prints an error message instead of crashing.
 
@@ -21,7 +21,7 @@ Modulo by Zero → Prints an error message instead of crashing.
 
 Invalid Operator → Prints "Error: Invalid operator."
 
-📖 Concepts Covered
+## 📖 Concepts Covered
 
 #include <stdio.h> → Standard I/O library
 
