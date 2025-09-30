@@ -103,30 +103,51 @@
 
         <section id="contact">
             <h2>Contact Me</h2>
-            <form>
+            <form action="#" method="post">
+
                 <div>
                     <label for="name">Name:</label>
-                    <input type="text" id="name" name="name">
+                    <input type="text" id="name" name="name" required placeholder="Enter your name">
+                </div>
+
+                <fieldset>
+                    <legend>Gender:</legend>
+                    <input type="radio" name="gender" id="male" value="male" required>
+                    <label for="male">Male</label>
+
+                    <input type="radio" name="gender" id="female" value="female" required>
+                    <label for="female">Female</label>
+                </fieldset>
+                
+                <div>
+                        <label for="Year">College Year:</label>
+                        <select name="Year" id="Year " required>
+                            <option value="FIRST YEAR">FIRST YEAR</option>
+                            <option value="SECOND YEAR">SECOND YEAR</option>
+                            <option value="THIRD YEAR">THIRD YEAR</option>  
+                            <option value="FOURTH YEAR">FOURTH YEAR</option>
+                        </select>
                 </div>
 
                 <div>
                     <label for="email">Email:</label>
-                    <input type="email" id="email" name="email">
+                    <input type="email" id="email" name="email" required placeholder="Example@gmail.com">
                 </div>
+
 
                 <div>
                     <label for="phone">Phone:</label>
-                    <input type="tel" id="phone" name="phone">
+                    <input type="tel" id="phone" name="phone" required placeholder="10 digits only" pattern="[0-9]{10}">
                 </div>
 
                 <div>
                     <label for="message">Message:</label>
                     <br>
-                    <textarea id="message" name="message" cols="35" rows="4"></textarea>
+                    <textarea id="message" name="message" cols="35" rows="4" placeholder="Enter your message"></textarea>
                 </div>
 
                 <div>
-                    <input type="submit" value="Send">
+                    <input type="submit" value="submit">
                 </div>
             </form>
         </section>
