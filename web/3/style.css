@@ -1,108 +1,130 @@
 * {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-}
-
-h2 {
-    text-decoration: underline;
-    margin-bottom: 10px;
-    color: aqu;
-    text-align: center;
-}
-section{
-    border: 2px solid black;
-    
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
 }
 
 body {
-    background-color: gray;
+  background-color: #f4f6f8;
+  font-family: "Poppins", sans-serif;
+  color: #333;
 }
 
-header {
-    background-color: cyan;
-    text-align: center;
-    padding: 10px;
+/* Headings */
+h2 {
+  text-decoration: underline;
+  margin-bottom: 10px;
+  color: #0077b6;
+  text-align: center;
 }
 
-section#about {
-    background-color: lightgreen;
-    text-align: center;
-    padding: 10px;
+/* Header and Footer */
+header, footer {
+  background-color: #0077b6;
+  border: 1px solid #005f8d;
+  color: white;
+  text-align: center;
+  padding: 15px;
 }
 
-section#photo {
-    background-color: rgba(247, 218, 80);/*maize*/
-    text-align: center;
-    padding: 10px;
+/* Sections */
+section {
+  border: 2px solid #ddd;
+  background-color: white;
+  margin: 10px;
+  border-radius: 10px;
 }
 
-section#hobbies {
-    /* background-color: rgb(34, 146, 226); *//*prussian blue*/
-    background-color: rgb(18, 173, 43);/*parrot green*/
-    text-align: center;
-    padding: 10px;
+/* Individual Section Styles */
+#about {
+  background-color: #d8f3dc;
+  text-align: center;
+  padding: 20px;
 }
 
-section#skills {
-    
-    background-color: rgb(241, 120, 241);
-    text-align: center;
-    padding: 10px;
+#photo {
+  background-color: #ffe8a3;
+  text-align: center;
+  padding: 20px;
 }
-section#skills li {
-        list-style-type: square;
-        
-    }
-
-section#websites {
-    background-color: lightgreen;
-    text-align: center;
-    padding: 30px;
-
+#photo img {
+  border-radius: 50%;
+  width: 150px;
+  height: 150px;
+  object-fit: cover;
 }
+#photo img {
+  border-radius: 50%;
+  transition: transform 0.3s ease;
+}
+#photo img:hover {
+  transform: scale(1.1);
+}
+
+#hobbies {
+  background-color: #a7c957;
+  text-align: center;
+  padding: 20px;
+}
+
+#skills {
+  background-color: #ffc8dd;
+  text-align: center;
+  padding: 20px;
+}
+
+#skills li {
+  list-style-type: square;
+}
+
+#websites {
+  background-color: #caffbf;
+  text-align: center;
+  padding: 20px;
+}
+
 ul {
-    list-style-type: disc;
-    margin: 0 auto;
-    display: inline-block;
-    text-align: left;
-}
-section#websites ul li {
-    list-style-position: inside;
-    display: inline-block;
-    padding: 5px;
+  list-style-type: disc;
+  margin: 0 auto;
+  display: inline-block;
+  text-align: left;
 }
 
-section#education {
-    background-color: orange;
-    text-align: center;
-    padding: 10px;
+#websites ul li {
+  list-style-position: inside;
+  display: inline-block;
+  padding: 5px 10px;
 }
 
-table,
-th,
-td {
-    margin: 20px auto;
-    table-layout: auto;
-    border: 2px solid black;
-    text-align: center;
-}
-th,td{
-    padding: 10px;
+#education {
+  background-color: #ffd6a5;
+  text-align: center;
+  padding: 20px;
 }
 
-section#contact {
-    color: white;
-    background-color: black;
-    text-align: center;
-    padding: 10px;
+table, th, td {
+  margin: 20px auto;
+  border: 2px solid #555;
+  text-align: center;
+  border-collapse: collapse;
 }
-section#contact h2{
-    color: aqua;
-}   
 
-footer {
-    background-color: cyan;
-    text-align: center;
-    padding: 10px;
+th, td {
+  padding: 10px 15px;
+}
+
+/* Contact Section */
+#contact {
+  color: white;
+  background-color: #212529;
+  text-align: center;
+  padding: 20px;
+}
+
+#contact h2 {
+  color: #4cc9f0;
+}
+
+form div {
+  margin: 10px 0;
 }
