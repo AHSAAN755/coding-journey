@@ -3,9 +3,9 @@ int main()
 {
 	double n1,n2;
 	char operator;
-	printf("give an operator(+,-,*,/,%): ");
+	printf("enter an operator(+,-,*,/,%): ");
 	scanf("%c",&operator);
-	printf("give me 2 no:");
+	printf("enter 2 no:");
 	scanf("%lf %lf",&n1,&n2);
 	switch(operator)
 	{
@@ -30,7 +30,7 @@ int main()
             break;
             
         default:
-            printf("error, wrong operator");
+            printf("error! wrong operator");
             break;
 	}
 	
