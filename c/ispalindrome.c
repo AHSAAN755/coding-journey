@@ -1,11 +1,12 @@
 #include<stdio.h>
 int main()
 {
-	int n,n1,r,re=0,sum=0;
+	int n,n1,r,sum=0;
+	long long re=0;
 	printf("enter a positive number:");
 	scanf("%d",&n);
 	n1=n;
-	while(n>10)
+	while(n>0)
 	{
 		r = n%10;
 		sum = sum + r;
