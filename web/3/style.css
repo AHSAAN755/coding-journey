@@ -48,7 +48,7 @@ section {
   padding: 20px;
 }
 #photo img {
-  border-radius: 50%;
+  /* border-radius: 50%; */
   width: 150px;
   height: 150px;
   object-fit: cover;
@@ -65,6 +65,10 @@ section {
   background-color: #a7c957;
   text-align: center;
   padding: 20px;
+}
+
+#hobbies ul{
+  list-style-type: square;
 }
 
 #skills {
