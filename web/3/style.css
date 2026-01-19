@@ -116,8 +116,11 @@ th, td {
 /* Contact Section */
 #contact {
   color: white;
-background-image: url("https://t3.ftcdn.net/jpg/18/57/41/62/240_F_1857416278_fJTNk225YinPmVMyyOP05xaGDlLcYtHa.jpg");
-
+background-image: url("https://t4.ftcdn.net/jpg/08/54/40/21/360_F_854402116_CgRWBZHfgXepFL7889yeJvECu8JTvRIf.jpg");
+/* background-image: url("https://t3.ftcdn.net/jpg/18/57/41/62/240_F_1857416278_fJTNk225YinPmVMyyOP05xaGDlLcYtHa.jpg"); */
+ background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
   text-align: left;
   padding: 20px;
 }
