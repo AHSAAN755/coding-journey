@@ -19,7 +19,8 @@ h2 {
 }
 
 /* Header and Footer */
-header, footer {
+header,
+footer {
   background-color: #0077b6;
   border: 1px solid #005f8d;
   color: white;
@@ -47,16 +48,19 @@ section {
   text-align: center;
   padding: 20px;
 }
+
 #photo img {
   /* border-radius: 50%; */
   width: 150px;
   height: 150px;
   object-fit: cover;
 }
+
 #photo img {
   border-radius: 50%;
   transition: transform 0.3s ease;
 }
+
 #photo img:hover {
   transform: scale(1.1);
 }
@@ -67,7 +71,7 @@ section {
   padding: 20px;
 }
 
-#hobbies ul{
+#hobbies ul {
   list-style-type: square;
 }
 
@@ -106,23 +110,26 @@ ul {
   padding: 20px;
 }
 
-table, th, td {
+table,
+th,
+td {
   margin: 20px auto;
   border: 2px solid #000000;
   text-align: center;
   /* border-collapse: collapse; */
 }
 
-th, td {
+th,
+td {
   padding: 10px 15px;
 }
 
 /* Contact Section */
 #contact {
   color: white;
-background-image: url("https://t4.ftcdn.net/jpg/08/54/40/21/360_F_854402116_CgRWBZHfgXepFL7889yeJvECu8JTvRIf.jpg");
-/* background-image: url("https://t3.ftcdn.net/jpg/18/57/41/62/240_F_1857416278_fJTNk225YinPmVMyyOP05xaGDlLcYtHa.jpg"); */
- background-size: cover;
+  background-image: url("https://t4.ftcdn.net/jpg/08/54/40/21/360_F_854402116_CgRWBZHfgXepFL7889yeJvECu8JTvRIf.jpg");
+  /* background-image: url("https://t3.ftcdn.net/jpg/18/57/41/62/240_F_1857416278_fJTNk225YinPmVMyyOP05xaGDlLcYtHa.jpg"); */
+  background-size: cover;
   background-repeat: no-repeat;
   background-position: center;
   text-align: left;
