@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Auction System</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <h1 class="title">Auction Dashboard</h1>
+    <div class="auction-container">
+        <div class="card player-card">
+            <h2>Current Player</h2>
+            <p>
+                Category:
+                <span id="category">batsman</span>
+            </p>
+            <h3 class="player-name">M S Dhoni</h3>
+            <p>
+                Base Price: ₹
+                <span id="base-price">2</span>cr
+            </p>
+            <p class="current-bid">
+                Current Bid: ₹
+                <span id="current-bid">2</span>cr
+            </p>
+            <p class="leading">
+                Leading: 
+                <span id="leading-team">None</span>
+            </p>
+            <p class="timer">Time Left: 
+                <span id="timer">60</span>s
+            </p>
+            <button class="next-btn">Next Player</button>
+        </div>
+        <div class="card bid-section">
+            <h2>Place Bid</h2>
+            <button class="bid-btn">Team A Bid</button>
+            <button class="bid-btn">Team B Bid</button>
+            <button class="bid-btn">Team C Bid</button>
+           
+        </div>
+    </div>
+    <script src="script.js"></script>
+</body>
+
+</html>

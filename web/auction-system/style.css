@@ -1,0 +1,81 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing:border-box;
+}
+body {
+    background-color: #0f172a;
+    color: #f1f5f9;
+    font-family: Arial, Helvetica, sans-serif;
+    min-height: 100vh;
+}
+.title{
+    text-align: center;
+    padding: 20px;
+    font-size: 28px;
+    letter-spacing: 1px;
+}
+.auction-container{
+    display: flex;
+    justify-content: center;
+    gap: 30px;
+    padding: 20px;
+}
+.card{
+    background-color: #1e293b;
+    padding: 20px;
+    border-radius: 12px;
+    width: 300px;
+    box-shadow: 0 0 15px rgba(0,0,0,0.5);
+}
+.card:hover{
+    transform: translateY(-5px);
+}
+.bid-section{
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+}
+.card h2{
+    margin-bottom: 15px;
+    font-size: 20px;
+}
+.card p{
+    margin-bottom: 8px;
+    font-size: 15px;
+}
+.player-name{
+    font-size: 24px;
+    font-weight: bold;
+    margin: 10px 0;
+    color: #38bdf8;
+}
+.leading span{
+    font-weight: bold;
+    color: #facc15;
+}
+
+button{
+    padding: 8px 12px;
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
+    font-size: 14px;
+    margin-top: 10px;
+    transition:0.3s;
+}
+.bid-btn{
+    background-color: #2563eb;
+    color:white;
+    margin-right: 8px;
+}
+.bid-btn:hover{
+    background-color: #1d4ed8;
+}
+.next-btn{
+    background-color: #16a34a;
+    color: white;
+}
+.next-btn:hover{
+    background-color: #15803d;
+}
