@@ -79,3 +79,47 @@ button{
 .next-btn:hover{
     background-color: #15803d;
 }
+.out-btn{
+    background-color: #ef4444;
+    color: white;
+}
+
+.out-btn:hover{
+    background-color: #dc2626;
+}
+.team-row{
+    display: flex;
+    gap: 10px;
+}
+.team-row .bid-btn{
+    flex: 2;
+}
+
+.team-row .out-btn{
+    flex: 1;
+}
+.teams-summary{
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    padding: 30px;
+}
+
+.team-card{
+    background-color: #1e293b;
+    padding: 15px;
+    border-radius: 10px;
+    width: 200px;
+    text-align: center;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.team-card:hover{
+    transform: translateY(-5px);
+    background-color: #334155;
+}
+#player-input {
+    padding: 6px;
+    margin-right: 10px;
+}
