@@ -13,15 +13,19 @@ const teamAOutButton = document.getElementById("team-a-out");
 const teamBOutButton = document.getElementById("team-b-out");
 const teamCOutButton = document.getElementById("team-c-out");
 
+const timerElement = document.getElementById("timer");
 // ------------------- VARIABLES -------------------
 
 let currentBid = 2;
 let leadingTeam = null;
 
-let teamStatus = {
-    "Team A": true,
-    "Team B": true,
-    "Team C": true
+let timer = 60;
+let timerInterval = null;
+
+let teams = {
+    "Team A": { purse: 90, players: 0, active: true},
+    "Team B": { purse: 90, players: 0, active: true},
+    "Team C": { purse: 90, players: 0, active: true}
 };
 
 // ------------------- START AUCTION -------------------
@@ -46,11 +50,9 @@ startAuctionButton.addEventListener("click", function () {
     leadingTeamElement.textContent = "None";
 
     // Reset teams
-    teamStatus = {
-        "Team A": true,
-        "Team B": true,
-        "Team C": true
-    };
+    for (let team in teams) {
+    teams[team].active = true;
+}
 
     teamABidButton.disabled = false;
     teamBBidButton.disabled = false;
@@ -60,13 +62,14 @@ startAuctionButton.addEventListener("click", function () {
     teamCOutButton.disabled = false;
 
     playerInput.value = "";
+    startTimer();
 });
 
 // ------------------- PLACE BID -------------------
 
 function placeBid(teamName) {
 
-    if (!teamStatus[teamName]) {
+    if (!teams[teamName].active) {
         return;
     }
 
@@ -75,18 +78,37 @@ function placeBid(teamName) {
         return;
     }
 
+    if (teams[teamName].purse < currentBid + 1) {
+        alert(teamName + " does not have enough purse!");
+        return;
+    }
+
     currentBid = currentBid + 1;
     leadingTeam = teamName;
 
     currentBidElement.textContent = currentBid;
     leadingTeamElement.textContent = teamName;
+    startTimer();
 }
 
+function startTimer() {
+    timer = 60;
+    timerElement.textContent = timer;
+    clearInterval(timerInterval);
+    timerInterval = setInterval(function () {
+        timer--;
+        timerElement.textContent = timer;
+        if (timer === 0) {
+            clearInterval(timerInterval);
+            declareWinner();
+        }
+    }, 1000);
+}
 // ------------------- TEAM OUT -------------------
 
 function teamOut(teamName, bidButton, outButton) {
 
-    teamStatus[teamName] = false;
+    teams[teamName].active = false;
 
     bidButton.disabled = true;
     outButton.disabled = true;
@@ -101,8 +123,8 @@ function checkWinner() {
     let activeTeams = 0;
     let lastActiveTeam = null;
 
-    for (let team in teamStatus) {
-        if (teamStatus[team]) {
+    for (let team in teams) {
+        if (teams[team].active) {
             activeTeams++;
             lastActiveTeam = team;
         }
@@ -115,6 +137,30 @@ function checkWinner() {
     }
 }
 
+function declareWinner() {
+    if (leadingTeam === null) {
+        alert("no bids placed!");
+        return;
+    }
+    alert(leadingTeam + " buys the player!");
+    completePurchase();
+}
+
+function completePurchase(){
+    teams[leadingTeam].purse -=currentBid;
+    teams[leadingTeam].players += 1;
+
+    updateTeamUI(leadingTeam);
+}
+
+function updateTeamUI(teamName){
+    let card = document.getElementById(
+        teamName.toLowercase().replace(" ","_")+"-card"
+    );
+    let spans = card.querySelectorAll("span");
+    spans[0].textContent=teams[teamName].purse;
+    spans[0].textContent=teams[teamName].players;
+}
 // ------------------- EVENT LISTENERS -------------------
 
 teamABidButton.addEventListener("click", function () {
