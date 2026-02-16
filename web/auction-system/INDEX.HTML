@@ -2,18 +2,24 @@
 <html lang="en">
 
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Auction System</title>
-    <link rel="stylesheet" href="style.css">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Auction System</title>
+  <link rel="stylesheet" href="style.css">
 </head>
 
 
 <body>
   <h1 class="title">Auction Dashboard</h1>
-   <div style="text-align:center; margin-bottom:20px;">
-      <input type="text" id="player-input" placeholder="Enter Player Name">
-      <button id="start-auction-btn">Start Auction</button>
+  <div class="top-controls">
+    <input type="text" id="player-input" placeholder="Enter Player Name">
+    <button id="start-auction-btn" class="top-btn">
+      Start Auction
+    </button>
+    <button id="reset-auction-btn" class="top-btn">
+      Reset Auction
+    </button>
+
   </div>
   <div class="auction-container">
     <div class="card player-card">
@@ -22,7 +28,7 @@
         Category:
         <span id="category">batsman</span>
       </p>
-     <h3 class="player-name" id="player-name">M S Dhoni</h3>
+      <h3 class="player-name" id="player-name">M S Dhoni</h3>
       <p>
         Base Price: ₹
         <span id="base-price">2</span>cr
@@ -45,41 +51,42 @@
       <div class="team-row">
         <button id="team-a-bid" class="bid-btn">Team A Bid</button>
         <button id="team-a-out" class="out-btn">Out</button>
-    </div>
+      </div>
 
-    <div class="team-row">
+      <div class="team-row">
         <button id="team-b-bid" class="bid-btn">Team B Bid</button>
         <button id="team-b-out" class="out-btn">Out</button>
-    </div>
+      </div>
 
-    <div class="team-row">
+      <div class="team-row">
         <button id="team-c-bid" class="bid-btn">Team C Bid</button>
         <button id="team-c-out" class="out-btn">Out</button>
-    </div>
+      </div>
 
     </div>
-    
+
   </div>
   <div class="teams-summary">
 
     <div class="team-card" id="team-a-card">
-        <h3>Team A</h3>
-        <p>Purse: ₹ <span>90</span>cr</p>
-        <p>Players: <span>0</span>/25</p>
+      <h3>Team A</h3>
+      <p>Purse: ₹ <span id="team-a-purse">90</span>cr</p>
+      <p>Players: <span id="team-a-players">0</span>/25</p>
     </div>
 
     <div class="team-card" id="team-b-card">
-        <h3>Team B</h3>
-        <p>Purse: ₹ <span>90</span>cr</p>
-        <p>Players: <span>0</span>/25</p>
+      <h3>Team B</h3>
+      <p>Purse: ₹ <span id="team-b-purse">90</span>cr</p>
+      <p>Players: <span id="team-b-players">0</span>/25</p>
     </div>
 
     <div class="team-card" id="team-c-card">
-        <h3>Team C</h3>
-        <p>Purse: ₹ <span>90</span>cr</p>
-        <p>Players: <span>0</span>/25</p>
+      <h3>Team C</h3>
+      <p>Purse: ₹ <span id="team-c-purse">90</span>cr</p>
+      <p>Players: <span id="team-c-players">0</span>/25</p>
     </div>
-<script src="script.js"></script>
-</div>
+    <script src="script.js"></script>
+  </div>
 </body>
+
 </html>

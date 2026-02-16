@@ -123,3 +123,67 @@ button{
     padding: 6px;
     margin-right: 10px;
 }
+/* ===== TOP CONTROL SECTION ===== */
+
+.top-controls {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 15px;
+    margin-bottom: 25px;
+    flex-wrap: wrap;
+}
+
+/* ===== INPUT BOX ===== */
+
+#player-input {
+    padding: 12px 18px;
+    font-size: 16px;
+    border: 2px solid #ccc;
+    border-radius: 8px;
+    outline: none;
+    transition: 0.3s ease;
+    width: 220px;
+}
+
+/* Input focus effect */
+#player-input:focus {
+    border-color: #4CAF50;
+    box-shadow: 0 0 6px rgba(76, 175, 80, 0.5);
+}
+
+/* ===== BUTTON COMMON STYLE ===== */
+
+.top-btn {
+    padding: 12px 20px;
+    font-size: 15px;
+    font-weight: 600;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: 0.3s ease;
+}
+
+/* ===== START BUTTON ===== */
+
+#start-auction-btn {
+    background-color: #4CAF50;
+    color: white;
+}
+
+#start-auction-btn:hover {
+    background-color: #43a047;
+    transform: translateY(-2px);
+}
+
+/* ===== RESET BUTTON ===== */
+
+#reset-auction-btn {
+    background-color: #f44336;
+    color: white;
+}
+
+#reset-auction-btn:hover {
+    background-color: #d32f2f;
+    transform: translateY(-2px);
+}

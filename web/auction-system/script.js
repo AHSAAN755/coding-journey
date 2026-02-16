@@ -4,6 +4,7 @@ const currentBidElement = document.getElementById("current-bid");
 const leadingTeamElement = document.getElementById("leading-team");
 const playerNameElement = document.getElementById("player-name");
 const startAuctionButton = document.getElementById("start-auction-btn");
+const resetAuctionButton = document.getElementById("reset-auction-btn");
 const playerInput = document.getElementById("player-input");
 
 const teamABidButton = document.getElementById("team-a-bid");
@@ -12,6 +13,7 @@ const teamCBidButton = document.getElementById("team-c-bid");
 const teamAOutButton = document.getElementById("team-a-out");
 const teamBOutButton = document.getElementById("team-b-out");
 const teamCOutButton = document.getElementById("team-c-out");
+
 
 const timerElement = document.getElementById("timer");
 // ------------------- VARIABLES -------------------
@@ -88,6 +90,7 @@ function placeBid(teamName) {
 
     currentBidElement.textContent = currentBid;
     leadingTeamElement.textContent = teamName;
+    autoEliminateTeams();
     startTimer();
 }
 
@@ -131,10 +134,38 @@ function checkWinner() {
     }
 
     if (activeTeams === 1 && lastActiveTeam !== null) {
+        clearInterval(timerInterval);
         leadingTeam = lastActiveTeam;
         leadingTeamElement.textContent = lastActiveTeam;
         alert(lastActiveTeam + " wins the player!");
+        completePurchase();
     }
+}
+
+function autoEliminateTeams() {
+
+    let nextBidAmount = currentBid + 1;
+
+    for (let team in teams) {
+
+        if (
+            teams[team].active &&
+            teams[team].purse < nextBidAmount
+        ) {
+
+            teams[team].active = false;
+
+            // Disable that team’s buttons
+            let formattedName = team.toLowerCase().replace(" ", "-");
+
+            document.getElementById(formattedName + "-bid").disabled = true;
+            document.getElementById(formattedName + "-out").disabled = true;
+
+            console.log(team + " auto eliminated (insufficient purse)");
+        }
+    }
+
+    checkWinner(); // check if only one remains
 }
 
 function declareWinner() {
@@ -147,20 +178,50 @@ function declareWinner() {
 }
 
 function completePurchase(){
+    if(!leadingTeam)return;
+    clearInterval(timerInterval);
     teams[leadingTeam].purse -=currentBid;
     teams[leadingTeam].players += 1;
 
     updateTeamUI(leadingTeam);
+    saveData();
 }
 
 function updateTeamUI(teamName){
-    let card = document.getElementById(
-        teamName.toLowercase().replace(" ","_")+"-card"
-    );
-    let spans = card.querySelectorAll("span");
-    spans[0].textContent=teams[teamName].purse;
-    spans[0].textContent=teams[teamName].players;
+
+    let formattedName = teamName.toLowerCase().replace(" ", "-");
+
+    let purseElement = document.getElementById(formattedName + "-purse");
+    let playersElement = document.getElementById(formattedName + "-players");
+
+    purseElement.textContent = teams[teamName].purse;
+    playersElement.textContent = teams[teamName].players;
 }
+
+function saveData(){
+    localStorage.setItem("auctionTeams",JSON.stringify(teams));
+}
+
+function resetAuctionData() {
+
+    // Reset teams object to default
+    teams = {
+        "Team A": { purse: 90, players: 0, active: true },
+        "Team B": { purse: 90, players: 0, active: true },
+        "Team C": { purse: 90, players: 0, active: true }
+    };
+
+    // Remove saved data from browser
+    localStorage.removeItem("auctionTeams");
+
+    // Update UI
+    for (let team in teams) {
+        updateTeamUI(team);
+    }
+
+    alert("Auction has been reset!");
+}
+
 // ------------------- EVENT LISTENERS -------------------
 
 teamABidButton.addEventListener("click", function () {
@@ -185,4 +246,24 @@ teamBOutButton.addEventListener("click", function () {
 
 teamCOutButton.addEventListener("click", function () {
     teamOut("Team C", teamCBidButton, teamCOutButton);
+});
+
+resetAuctionButton.addEventListener("click", function () {
+    resetAuctionData();
+});
+
+
+window.addEventListener("load", function () {
+
+    let savedData = localStorage.getItem("auctionTeams");
+
+    if (savedData) {
+
+        teams = JSON.parse(savedData);
+
+        // Update UI for all teams
+        for (let team in teams) {
+            updateTeamUI(team);
+        }
+    }
 });
