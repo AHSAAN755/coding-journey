@@ -1,0 +1,96 @@
+/* Reset default spacing */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+/* Page background */
+body {
+    background: linear-gradient(135deg, #1e1e2f, #2c3e50);
+    color: white;
+    min-height: 100vh;
+    padding: 40px 20px;
+    text-align: center;
+}
+
+/* Team Title */
+#team-title {
+    font-size: 40px;
+    margin-bottom: 25px;
+    letter-spacing: 1px;
+}
+
+/* Stats section */
+p {
+    font-size: 20px;
+    margin: 10px 0;
+}
+
+/* Highlight numbers */
+#team-purse,
+#team-players {
+    font-weight: bold;
+    color: #00ffcc;
+}
+
+/* Squad section heading */
+h2 {
+    margin-top: 30px;
+    margin-bottom: 15px;
+    font-size: 26px;
+    border-bottom: 2px solid #00ffcc;
+    display: inline-block;
+    padding-bottom: 5px;
+}
+
+/* Squad list container */
+#squad-list {
+    list-style: none;
+    margin-top: 20px;
+    max-width: 500px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+/* Each player card */
+#squad-list li {
+    background-color: rgba(255, 255, 255, 0.08);
+    padding: 12px 15px;
+    margin-bottom: 10px;
+    border-radius: 8px;
+    font-size: 18px;
+    transition: 0.3s;
+}
+
+/* Hover effect */
+#squad-list li:hover {
+    background-color: rgba(0, 255, 204, 0.2);
+    transform: scale(1.02);
+}
+
+/* Back button styling */
+.back-btn {
+    display: inline-block;
+    margin-top: 30px;
+    text-decoration: none;
+    background-color: #00ffcc;
+    color: white;
+    padding: 10px 18px;
+    border-radius: 6px;
+    font-weight: bold;
+    transition: 0.3s;
+}
+
+.back-btn:hover {
+    background-color: white;
+    color: black;
+}
+
+
+/* Back button hover */
+a:hover {
+    background-color: white;
+    transform: translateY(-2px);
+}

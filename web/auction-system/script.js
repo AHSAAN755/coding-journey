@@ -25,9 +25,9 @@ let timer = 60;
 let timerInterval = null;
 
 let teams = {
-    "Team A": { purse: 90, players: 0, active: true},
-    "Team B": { purse: 90, players: 0, active: true},
-    "Team C": { purse: 90, players: 0, active: true}
+    "Team A": { purse: 90, players: 0, active: true, squad: [] },
+    "Team B": { purse: 90, players: 0, active: true, squad: [] },
+    "Team C": { purse: 90, players: 0, active: true, squad: [] }
 };
 
 // ------------------- START AUCTION -------------------
@@ -183,6 +183,12 @@ function completePurchase(){
     teams[leadingTeam].purse -=currentBid;
     teams[leadingTeam].players += 1;
 
+    // Add player to squad
+    teams[leadingTeam].squad.push({
+        name: playerNameElement.textContent,
+        price: currentBid
+    });
+    
     updateTeamUI(leadingTeam);
     saveData();
 }
