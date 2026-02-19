@@ -25,9 +25,9 @@ let timer = 60;
 let timerInterval = null;
 
 let teams = {
-    "Team A": { purse: 90, players: 0, active: true, squad: [] },
-    "Team B": { purse: 90, players: 0, active: true, squad: [] },
-    "Team C": { purse: 90, players: 0, active: true, squad: [] }
+    "Team A": { purse: 120, players: 0, active: true, squad: [] },
+    "Team B": { purse: 120, players: 0, active: true, squad: [] },
+    "Team C": { purse: 120, players: 0, active: true, squad: [] }
 };
 
 // ------------------- START AUCTION -------------------
@@ -212,9 +212,9 @@ function resetAuctionData() {
 
     // Reset teams object to default
     teams = {
-        "Team A": { purse: 90, players: 0, active: true },
-        "Team B": { purse: 90, players: 0, active: true },
-        "Team C": { purse: 90, players: 0, active: true }
+        "Team A": { purse: 120, players: 0, active: true },
+        "Team B": { purse: 120, players: 0, active: true },
+        "Team C": { purse: 120, players: 0, active: true }
     };
 
     // Remove saved data from browser
