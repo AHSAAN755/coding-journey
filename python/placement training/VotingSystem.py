@@ -1,0 +1,1 @@
+# voting system using dictionary creating a voting sytem that stores votes for candidates. count the number recieved by each candidate. identifies the winner(canditate with max votes)
