@@ -1,10 +1,11 @@
+//delete element in sorted list
 #include<stdio.h>
-int insert(int a[],int n, int elem){
+int del(int a[],int n, int elem){
 	int i,pos=1,flag=0;
 	for(i=0;i<n;i++){
 		if(elem<a[i])
 		{
-			pos=i+1;
+			pos=i;
 			flag=1;
 			break;
 		}
@@ -13,10 +14,10 @@ int insert(int a[],int n, int elem){
 		pos=n+1;
 	}
 	
-	for(i=n;i>=pos;i--){
-		a[i]=a[i-1];
-	} 
-	a[pos-1]=elem;
+for(i=pos-1;i<n;i++){
+ 		a[i]=a[i+1];
+	 }
+	 a[n-1]=NULL;
 	return 1;
 }
 
@@ -33,9 +34,9 @@ int main(){
 		scanf("%d",&a[i]);
 	}
 	scanf("%d",&elem);
-	x=insert(a,n,elem);
+	x=del(a,n,elem);
 	if (x==1){
-		n++;
+		n--;
 	}
 	display(a,n);
 	return 0;
